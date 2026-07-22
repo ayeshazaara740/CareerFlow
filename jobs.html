@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Jobs | CareerFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jobs.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body><script defer src="js/back-home.js"></script>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span>CareerFlow</span>
+        </a>
+        <nav class="top-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="jobs.html" class="nav-link active">Jobs</a>
+          <a href="saved-jobs.html" class="nav-link">Saved</a>
+          <a href="admin.html" class="nav-link">Admin</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary" href="login.html">Sign In</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-shell">
+      <section class="page-intro reveal">
+        <div>
+          <span class="eyebrow">Job listings</span>
+          <h1>Find the right opportunity.</h1>
+          <p>Search, filter, and sort across thoughtfully curated roles.</p>
+        </div>
+      </section>
+
+      <section class="glass-card filter-panel reveal">
+        <div class="search-row">
+          <input id="job-search" type="text" placeholder="Search by title, company, or skills" />
+          <select id="sort-select">
+            <option value="latest">Latest</option>
+            <option value="salary-desc">Highest Salary</option>
+            <option value="salary-asc">Lowest Salary</option>
+            <option value="company">Company Name</option>
+          </select>
+        </div>
+        <div class="filter-grid">
+          <select id="role-filter">
+            <option value="">All Roles</option>
+          </select>
+          <select id="location-filter">
+            <option value="">All Locations</option>
+          </select>
+          <select id="experience-filter">
+            <option value="">All Experience</option>
+          </select>
+          <select id="salary-filter">
+            <option value="">Any Salary</option>
+            <option value="600000">₹6 LPA+</option>
+            <option value="1200000">₹12 LPA+</option>
+            <option value="2000000">₹20 LPA+</option>
+          </select>
+          <select id="type-filter">
+            <option value="">Employment Type</option>
+          </select>
+          <select id="mode-filter">
+            <option value="">Work Mode</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="results-header reveal">
+        <p id="results-count">Loading opportunities…</p>
+      </section>
+
+      <section class="job-grid" id="jobs-list"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <strong>CareerFlow</strong>
+          <p>Premium job marketplace for modern professionals</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <p class="text-muted">© 2024 CareerFlow. All rights reserved.</p>
+
+      </div>
+    </footer>
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/jobs.js"></script>
+  </body>
+</html>

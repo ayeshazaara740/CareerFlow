@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | CareerFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .auth-container {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .auth-side { padding: 40px; }
+    .auth-copy h1 { font-size: 2.2rem; margin-bottom: 16px; }
+    .auth-copy p { color: var(--muted); margin-bottom: 32px; }
+    .auth-form { max-width: 380px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+    .form-group input { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; }
+    .form-group input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(217, 70, 166, 0.1); }
+    .remember-me { display: flex; align-items: center; gap: 8px; margin: 20px 0; font-size: 0.9rem; }
+    .remember-me input[type="checkbox"] { cursor: pointer; }
+    .forgot-password { text-align: right; margin-bottom: 20px; }
+    .forgot-password a { color: var(--accent); font-weight: 600; }
+    .submit-btn { width: 100%; }
+    .divider { text-align: center; margin: 24px 0; color: var(--muted); }
+    .signup-link { text-align: center; margin-top: 20px; }
+    .signup-link a { color: var(--accent); font-weight: 600; }
+    .password-strength { font-size: 0.85rem; margin-top: 6px; padding: 6px 0; }
+    .strength-bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 4px; overflow: hidden; }
+    .strength-fill { height: 100%; transition: all 0.3s ease; }
+    @media (max-width: 768px) {
+      .auth-container { grid-template-columns: 1fr; }
+      .auth-side:first-child { display: none; }
+    }
+  </style>
+</head>
+<body class="page-loaded"><script defer src="js/back-home.js"></script>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span>CareerFlow</span>
+        </a>
+        <nav class="top-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="jobs.html" class="nav-link">Jobs</a>
+        </nav>
+        <div class="header-actions">
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="auth-container reveal">
+        <div class="auth-side auth-copy">
+          <h1>Welcome to CareerFlow</h1>
+          <p>Access your profile, saved jobs, and applications all in one place.</p>
+          <div class="glass-card feature-card" style="margin: 20px 0;">
+            <h3>✓ Explore 1000+ Jobs</h3>
+            <p>Find roles across all industries and experience levels.</p>
+          </div>
+          <div class="glass-card feature-card" style="margin: 20px 0;">
+            <h3>✓ Save & Track</h3>
+            <p>Bookmark jobs and monitor your applications in real-time.</p>
+          </div>
+          <div class="glass-card feature-card" style="margin: 20px 0;">
+            <h3>✓ Get Notified</h3>
+            <p>Receive updates on job matches and recruiter responses.</p>
+          </div>
+        </div>
+
+        <div class="auth-side">
+          <div class="glass-card detail-card" style="padding: 32px;">
+            <h2 style="margin-top: 0;">Sign In</h2>
+            <form id="login-form" novalidate>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required />
+              </div>
+              <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember" />
+                <label for="remember" style="margin: 0;">Remember me</label>
+              </div>
+              <div class="forgot-password">
+                <a href="#forgot">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary submit-btn">Sign In</button>
+            </form>
+
+            <div class="divider">or</div>
+
+            <div class="signup-link">
+              Don't have an account? <a href="register.html">Sign up here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <strong>CareerFlow</strong>
+          <p>Premium job marketplace for modern professionals</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <p class="text-muted">© 2024 CareerFlow. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const remember = document.getElementById('remember').checked;
+
+        const result = loginUser(email, password);
+        if (result.success) {
+          if (remember) {
+            localStorage.setItem('careerflow-remember-email', email);
+          }
+          showToast('Welcome back! Redirecting to dashboard...', 'success');
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1500);
+        } else {
+          showToast(result.message, 'error');
+        }
+      });
+
+      // Load remembered email
+      const remembered = localStorage.getItem('careerflow-remember-email');
+      if (remembered) {
+        document.getElementById('email').value = remembered;
+        document.getElementById('remember').checked = true;
+      }
+    }
+  </script>
+</body>
+</html>

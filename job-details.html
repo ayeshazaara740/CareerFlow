@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details | CareerFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jobs.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body><script defer src="js/back-home.js"></script>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span>CareerFlow</span>
+        </a>
+        <nav class="top-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="jobs.html" class="nav-link">Jobs</a>
+          <a href="saved-jobs.html" class="nav-link">Saved</a>
+          <a href="admin.html" class="nav-link">Admin</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-primary" href="jobs.html">Back to jobs</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-shell detail-shell">
+      <section class="glass-card detail-hero reveal" id="job-detail-hero"></section>
+      <section class="detail-content reveal">
+        <div class="detail-main">
+          <div class="glass-card detail-card">
+            <h2>About this role</h2>
+            <div id="job-description"></div>
+          </div>
+          <div class="glass-card detail-card">
+            <h2>Responsibilities</h2>
+            <ul id="job-responsibilities"></ul>
+          </div>
+          <div class="glass-card detail-card">
+            <h2>Requirements</h2>
+            <ul id="job-requirements"></ul>
+          </div>
+          <div class="glass-card detail-card">
+            <h2>Benefits</h2>
+            <ul id="job-benefits"></ul>
+          </div>
+        </div>
+        <aside class="detail-sidebar">
+          <div class="glass-card detail-card">
+            <h3>Company info</h3>
+            <div id="company-info"></div>
+          </div>
+          <div class="glass-card detail-card">
+            <h3>Similar jobs</h3>
+            <div id="similar-jobs"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/jobs.js"></script>
+  </body>
+</html>

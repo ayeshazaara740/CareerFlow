@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerFlow | Find Your Dream Career Today</title>
+  <meta name="description" content="CareerFlow is a premium job marketplace for modern professionals. Discover roles, save favorites, and manage applications with a beautiful experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/jobs.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="page-loaded">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span>CareerFlow</span>
+        </a>
+        <nav class="top-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="jobs.html" class="nav-link">Jobs</a>
+          <a href="saved-jobs.html" class="nav-link">Saved</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-secondary" href="login.html">Sign In</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="home-hero hero-bg reveal">
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Premium career platform</span>
+            <h1>Find Your Dream Career Today</h1>
+            <p>Search modern roles, save favorites, and connect with hiring teams in a polished, secure job experience.</p>
+            <form class="hero-search" id="hero-search-form">
+              <input type="text" id="hero-search-input" placeholder="Search jobs, companies, or skills" aria-label="Search jobs" />
+              <button type="submit" class="btn btn-primary">Search roles</button>
+            </form>
+            <div class="hero-badges">
+              <span>Remote friendly</span>
+              <span>Verified employers</span>
+              <span>Secure applications</span>
+            </div>
+          </div>
+          <div class="hero-metrics glass-card">
+            <div class="metric-item">
+              <strong>8.7k+</strong>
+              <span>Active openings</span>
+            </div>
+            <div class="metric-item">
+              <strong>96%</strong>
+              <span>Candidate matches</span>
+            </div>
+            <div class="metric-item">
+              <strong>18k+</strong>
+              <span>Applications sent</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section reveal">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Top categories</span>
+            <h2>Explore by role, skill, or team.</h2>
+          </div>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </section>
+
+      <section class="container section reveal">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Featured companies</span>
+            <h2>Trusted hiring partners.</h2>
+          </div>
+        </div>
+        <div class="company-grid" id="company-grid"></div>
+      </section>
+
+      <section class="container section reveal">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Latest roles</span>
+            <h2>Recently added opportunities.</h2>
+          </div>
+        </div>
+        <div class="job-grid" id="featured-jobs"></div>
+      </section>
+
+      <section class="stats-section reveal">
+        <div class="container stats-grid stats-split">
+          <div class="stats-copy">
+            <span class="eyebrow">Career momentum</span>
+            <h2>Launch your next chapter with confidence.</h2>
+            <p>We connect professionals to roles in AI, fintech, healthcare, education, and product teams.</p>
+          </div>
+          <div class="stats-cards">
+            <div class="stat-card">
+              <strong>120+</strong>
+              <span>Companies hiring</span>
+            </div>
+            <div class="stat-card">
+              <strong>95%</strong>
+              <span>Positive feedback</span>
+            </div>
+            <div class="stat-card">
+              <strong>58k</strong>
+              <span>Roles published</span>
+            </div>
+            <div class="stat-card">
+              <strong>5m+</strong>
+              <span>Job searches</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section reveal">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">How it works</span>
+            <h2>Search, apply, and track in one place.</h2>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="glass-card feature-card">
+            <h3>Find relevant roles</h3>
+            <p>Use curated filters and smart search to find openings that match your experience.</p>
+          </article>
+          <article class="glass-card feature-card">
+            <h3>Save favorites</h3>
+            <p>Bookmark jobs for later, maintain your shortlist, and compare offers at a glance.</p>
+          </article>
+          <article class="glass-card feature-card">
+            <h3>Apply confidently</h3>
+            <p>Complete application forms with validation and receive instant confirmations.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section reveal testimonials-section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Candidate stories</span>
+            <h2>What professionals say about CareerFlow.</h2>
+          </div>
+        </div>
+        <div class="testimonial-grid" id="candidate-stories">
+          <article class="glass-card testimonial-card">
+            <p>“Job search finally feels premium. I found multiple interviews within the first week.”</p>
+            <strong>Anna M.</strong>
+          </article>
+          <article class="glass-card testimonial-card">
+            <p>“The filtering is easy, and the application flow is crisp. I loved the job details page.”</p>
+            <strong>Jordan P.</strong>
+          </article>
+          <article class="glass-card testimonial-card">
+            <p>“It feels like a professional product, not a school assignment. Great visual polish.”</p>
+            <strong>Mina K.</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section reveal newsletter-section">
+        <div class="glass-card newsletter-card newsletter-hero">
+          <div>
+            <span class="eyebrow">Stay ahead</span>
+            <h2>Get weekly job alerts from top companies.</h2>
+            <p>Subscribe to receive curated roles delivered to your inbox.</p>
+          </div>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Email address" aria-label="Email address" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+      <section class="container section reveal" id="about">
+        <div class="stats-grid"><div><span class="eyebrow">Career intelligence</span><h2>Practical insights for your next move.</h2><p>Explore salary-ready roles, hiring trends, and focused guidance built for India’s rapidly evolving teams.</p></div><div class="glass-card detail-card"><strong>Hiring trend: AI, cloud and product roles lead growth</strong><p>Build a portfolio around demonstrable outcomes, keep your profile current, and tailor each application to the team’s mission.</p><a class="text-link" href="jobs.html">Explore trending roles →</a></div></div>
+      </section>
+      <section class="container section reveal" id="faq">
+        <div class="section-heading"><div><span class="eyebrow">FAQ</span><h2>Questions, answered.</h2></div></div>
+        <div class="feature-grid"><details class="glass-card feature-card" open><summary>How do I apply?</summary><p>Open a role, choose Apply, and submit your profile and resume.</p></details><details class="glass-card feature-card"><summary>Is CareerFlow free?</summary><p>Yes. Creating a candidate profile and applying to roles is free.</p></details><details class="glass-card feature-card"><summary>Can I apply from mobile?</summary><p>Yes. Search, save, upload your resume, and apply from any device.</p></details></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <strong>CareerFlow</strong>
+          <p>Modern job search and application management for ambitious professionals.</p>
+        </div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Login</a>
+          <a href="admin.html">Admin</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/jobs.js"></script>
+  <script src="js/stories.js"></script>
+  <script defer src="js/back-home.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.job-card { display: grid; gap: 10px; }
+.job-card .company-row { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.company-logo { width: 40px; height: 40px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; }
+.job-card h3 { margin: 0 0 4px; }
+.job-card > div:first-child > div:last-child h3 { margin: 0; }
+.job-card > div:first-child > div:last-child p { margin: 2px 0; font-size: 0.9rem; color: var(--muted); }
+.salary-display { text-align: right; }
+.salary { font-size: 1.1rem; font-weight: 800; color: var(--accent); }
+.salary-usd { font-size: 0.85rem; color: var(--muted); }
+.job-card .description { color: var(--muted); margin: 8px 0; }
+.job-card .job-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; color: var(--muted); font-size: .92rem; }
+.job-card .save-btn, .job-card .share-btn, .job-card .detail-btn { padding: 10px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-strong); color: var(--text); cursor: pointer; font-weight: 600; transition: all 0.2s ease; }
+.job-card .save-btn:hover, .job-card .share-btn:hover, .job-card .detail-btn:hover { border-color: var(--accent); color: var(--accent); }
+.job-card .save-btn.active { color: var(--accent); border-color: var(--accent); background: rgba(217, 70, 166, 0.1); }
+

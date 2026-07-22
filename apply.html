@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply | CareerFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body><script defer src="js/back-home.js"></script>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span>CareerFlow</span>
+        </a>
+        <nav class="top-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="jobs.html" class="nav-link">Jobs</a>
+          <a href="saved-jobs.html" class="nav-link">Saved</a>
+          <a href="index.html" class="nav-link">Dashboard</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-secondary" href="jobs.html">Back</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-shell">
+      <section class="glass-card form-card reveal">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Application</span>
+            <h1>Apply with confidence.</h1>
+            <p>Share your profile and we’ll help you move forward fast.</p>
+          </div>
+        </div>
+        <form id="application-form" novalidate>
+          <div class="form-grid">
+            <label>
+              Full Name
+              <input type="text" name="fullName" maxlength="80" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" maxlength="120" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" maxlength="20" required />
+            </label>
+            <label>
+              College
+              <input type="text" name="college" maxlength="120" required />
+            </label>
+            <label>
+              Degree
+              <input type="text" name="degree" maxlength="100" placeholder="B.Tech, BCA, MBA…" required />
+            </label>
+            <label>
+              Experience
+              <select name="experience" required><option value="">Select experience</option><option>Fresher</option><option>0–1 years</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select>
+            </label>
+            <label>
+              Skills
+              <input type="text" name="skills" maxlength="200" placeholder="Python, React, SQL" required />
+            </label>
+            <label>
+              Current Location
+              <input type="text" name="location" maxlength="100" placeholder="Hyderabad, India" required />
+            </label>
+            <label>
+              Portfolio URL
+              <input type="url" name="portfolioUrl" maxlength="300" />
+            </label>
+            <label>
+              LinkedIn
+              <input type="url" name="linkedin" maxlength="300" />
+            </label>
+            <label>
+              GitHub
+              <input type="url" name="github" maxlength="300" />
+            </label>
+          </div>
+          <input type="file" id="resume-file" accept=".pdf,.doc,.docx" hidden />
+          <div class="upload-zone" id="upload-zone" role="button" tabindex="0">
+            <strong>Drop your resume here or browse</strong>
+            <p>PDF, DOC, or DOCX up to 8 MB</p>
+            <div id="file-name" aria-live="polite"></div>
+            <div class="upload-progress" aria-hidden="true"><span id="upload-progress"></span></div>
+          </div>
+          <label>
+            Cover Letter
+            <textarea name="coverLetter" maxlength="700" rows="6" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Submit application</button>
+        </form>
+      </section>
+    </main>
+
+    <div class="toast-container" id="toast-container"></div>
+    <div class="modal" id="success-modal" hidden>
+      <div class="modal-card"><div class="success-badge">✓</div><h2>Congratulations!</h2><p>Your application has been submitted successfully.</p><a class="btn btn-primary" href="index.html">Go to Dashboard</a></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/apply.js"></script>
+  </body>
+</html>

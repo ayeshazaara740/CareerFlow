@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | CareerFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .profile-hero { padding: 40px 0; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+    .profile-header { display: flex; gap: 30px; align-items: flex-start; }
+    .profile-pic { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 800; flex-shrink: 0; }
+    .profile-info h2 { margin: 0 0 8px; }
+    .profile-info .email { color: var(--muted); margin-bottom: 16px; }
+    .profile-info .status { display: inline-block; padding: 4px 12px; background: var(--success); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+    .profile-section { margin-bottom: 32px; }
+    .section-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; }
+    .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+    .skill-badge { padding: 12px; text-align: center; background: var(--accent-light); color: var(--accent); border-radius: 8px; font-weight: 600; font-size: 0.9rem; }
+    .education-item, .experience-item { padding: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; }
+    .item-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; }
+    .item-title { font-weight: 700; }
+    .item-meta { font-size: 0.9rem; color: var(--muted); }
+    .edit-profile-btn { margin-top: 24px; }
+    @media (max-width: 768px) {
+      .profile-header { flex-direction: column; align-items: center; text-align: center; }
+      .skill-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body class="page-loaded"><script defer src="js/back-home.js"></script>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">CF</span>
+          <span>CareerFlow</span>
+        </a>
+        <nav class="top-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="jobs.html" class="nav-link">Jobs</a>
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="profile.html" class="nav-link active">Profile</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-secondary" id="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-shell">
+      <div class="profile-hero reveal">
+        <div class="profile-header">
+          <div class="profile-pic" id="profile-avatar">JD</div>
+          <div class="profile-info">
+            <h2 id="profile-name">John Doe</h2>
+            <div class="email" id="profile-email">john@example.com</div>
+            <div>
+              <span class="status">✓ Profile Complete</span>
+            </div>
+            <div style="margin-top: 16px;">
+              <p id="profile-bio" style="margin: 0; color: var(--muted); line-height: 1.6;">Passionate full-stack developer with 5+ years of experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card detail-card" style="padding: 32px; margin-bottom: 32px;">
+        <div class="profile-section">
+          <h3 class="section-title">📚 Education</h3>
+          <div id="education-list">
+            <div class="education-item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Bachelor of Technology</div>
+                  <div class="item-meta">Computer Science</div>
+                </div>
+                <div style="text-align: right;">
+                  <div class="item-meta">2018 - 2022</div>
+                </div>
+              </div>
+              <div class="item-meta">IIT Bombay, Mumbai</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-section">
+          <h3 class="section-title">💼 Experience</h3>
+          <div id="experience-list">
+            <div class="experience-item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Senior Full Stack Developer</div>
+                  <div class="item-meta">CloudTech Labs</div>
+                </div>
+                <div style="text-align: right;">
+                  <div class="item-meta">2023 - Present</div>
+                </div>
+              </div>
+              <div class="item-meta">Built scalable web applications and led a team of 5 engineers</div>
+            </div>
+            <div class="experience-item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Full Stack Developer</div>
+                  <div class="item-meta">TechStart Inc</div>
+                </div>
+                <div style="text-align: right;">
+                  <div class="item-meta">2021 - 2023</div>
+                </div>
+              </div>
+              <div class="item-meta">Developed frontend and backend components using React and Node.js</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-section">
+          <h3 class="section-title">🎯 Skills</h3>
+          <div class="skill-grid">
+            <div class="skill-badge">JavaScript</div>
+            <div class="skill-badge">React</div>
+            <div class="skill-badge">Node.js</div>
+            <div class="skill-badge">Python</div>
+            <div class="skill-badge">AWS</div>
+            <div class="skill-badge">Docker</div>
+            <div class="skill-badge">PostgreSQL</div>
+            <div class="skill-badge">Git</div>
+          </div>
+        </div>
+
+        <div class="profile-section">
+          <h3 class="section-title">📄 Resume</h3>
+          <div class="glass-card" style="padding: 16px; margin-top: 12px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 1.5rem;">📄</span>
+              <div style="flex: 1;">
+                <div style="font-weight: 600;">Resume.pdf</div>
+                <div style="font-size: 0.9rem; color: var(--muted);">Updated 2 days ago</div>
+              </div>
+              <button class="btn btn-secondary" style="padding: 8px 12px; font-size: 0.9rem;">View</button>
+              <button class="btn btn-secondary" style="padding: 8px 12px; font-size: 0.9rem;">Update</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-section">
+          <h3 class="section-title">🔗 Links</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+            <a href="#portfolio" class="glass-card" style="padding: 16px; text-decoration: none; border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s ease;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+              <div style="font-weight: 600; margin-bottom: 4px;">🌐 Portfolio</div>
+              <div style="font-size: 0.85rem; color: var(--muted);">yourportfolio.com</div>
+            </a>
+            <a href="#github" class="glass-card" style="padding: 16px; text-decoration: none; border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s ease;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+              <div style="font-weight: 600; margin-bottom: 4px;">💻 GitHub</div>
+              <div style="font-size: 0.85rem; color: var(--muted);">github.com/yourprofile</div>
+            </a>
+            <a href="#linkedin" class="glass-card" style="padding: 16px; text-decoration: none; border: 1px solid var(--border); border-radius: 8px; transition: all 0.2s ease;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+              <div style="font-weight: 600; margin-bottom: 4px;">👔 LinkedIn</div>
+              <div style="font-size: 0.85rem; color: var(--muted);">linkedin.com/in/yourprofile</div>
+            </a>
+          </div>
+        </div>
+
+        <button class="btn btn-primary edit-profile-btn" id="edit-btn">Edit Profile</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <strong>CareerFlow</strong>
+          <p>Premium job marketplace for modern professionals</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <p class="text-muted">© 2024 CareerFlow. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // Check if user is logged in
+    const user = getCurrentUser();
+    if (!user) {
+      window.location.href = 'login.html';
+    } else {
+      const initials = user.name.split(' ').map(n => n[0]).join('');
+      document.getElementById('profile-avatar').textContent = initials;
+      document.getElementById('profile-name').textContent = user.name;
+      document.getElementById('profile-email').textContent = user.email;
+    }
+
+    // Logout functionality
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      if (confirm('Are you sure you want to logout?')) {
+        logoutUser();
+        showToast('Logged out successfully', 'success');
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      }
+    });
+
+    // Edit button
+    document.getElementById('edit-btn').addEventListener('click', () => {
+      showToast('Profile editing coming soon!', 'info');
+    });
+  </script>
+</body>
+</html>
